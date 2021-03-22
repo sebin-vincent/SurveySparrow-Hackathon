@@ -1,0 +1,25 @@
+version: "3"
+services:
+  filebeat:
+    user: root
+    image: docker.elastic.co/beats/filebeat-oss:7.11.2
+    entrypoint: "filebeat -e -strict.perms=false"
+    container_name: filebeat
+    volumes:
+      - "/home/ubuntu/elk/filebeat.docker.yml:/usr/share/filebeat/filebeat.yml:ro"
+      - "/var/lib/docker/containers:/var/lib/docker/containers:ro"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    depends_on:
+      - logstash
+
+  logstash:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: logstash
+    ports:
+      - 5044
+    volumes:
+      - "/home/ubuntu/elk/logstash.conf:/usr/share/logstash/pipeline/logstash.conf"
+      - "/home/ubuntu/elk/logstash.yml:/usr/share/logstash/config/logstash.yml"
+      - "/home/ubuntu/elk/log4j2.properties:/usr/share/logstash/config/log4j2.properties"
