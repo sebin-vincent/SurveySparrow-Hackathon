@@ -1,0 +1,154 @@
+@import "../../../theme/scss/styles.scss";
+
+.create_update_kahoot_wrapper {
+    display: flex;
+    flex-direction: row;
+
+    .create_update_kahoot {
+        width: 80%;
+        &_card {
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 6rem;
+        }
+
+        &_choices {
+            margin-top: 5rem;
+
+            &_each {
+                padding: 1rem 0.5rem;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 42%;
+                    left: 1.25rem;
+                }
+
+                &:nth-child(odd) {
+                    padding-left: 0rem;
+                }
+
+                &:nth-child(even) {
+                    padding-right: 0rem;
+                }
+
+                &:nth-child(1) {
+                    &:before {
+                        width: 0;
+                        height: 0;
+                        border-left: 1.25rem solid transparent;
+                        border-right: 1.25rem solid transparent;
+                        border-bottom: 1.75rem solid $color-light-100;
+                    }
+
+                    .MuiPaper-root {
+                        background-color: $color-red-main;
+                    }
+                }
+
+                &:nth-child(2) {
+                    &:before {
+                        width: 1.75rem;
+                        height: 1.75rem;
+                        background-color: $color-light-100;
+                        transform: translate(45%, 0%) rotate(45deg);
+                    }
+
+                    .MuiPaper-root {
+                        background-color: $color-blue-main;
+                    }
+                }
+
+                &:nth-child(3) {
+                    &:before {
+                        width: 2rem;
+                        height: 2rem;
+                        left: 1.5rem;
+                        background-color: $color-light-100;
+                    }
+
+                    .MuiPaper-root {
+                        background-color: $color-yellow-main;
+                    }
+                }
+
+                &:nth-child(4) {
+                    &:before {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        left: 1.75rem;
+                        background-color: $color-light-100;
+                        border-radius: 50%;
+                    }
+
+                    .MuiPaper-root {
+                        background-color: $color-green-main;
+                    }
+                }
+
+                input {
+                    background: $color-light-100;
+                }
+
+                &_card {
+                    padding: 2rem;
+                    padding-left: 5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &_choice {
+                    }
+                    &_radio {
+                        .MuiSvgIcon-root {
+                            height: 3rem;
+                            width: 3rem;
+                            fill: $color-light-100;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .create_update_config {
+        flex-grow: 1;
+        padding: 3rem 1rem;
+        padding-bottom: 0rem;
+
+        &_options {
+            padding-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+
+            .MuiInputLabel-outlined.MuiInputLabel-shrink {
+                transform: translate(10px, -15px) scale(0.75);
+            }
+
+            .btn_add_left {
+                width: 100%;
+                margin-right: 0.5rem !important;
+            }
+
+            .btn_add_right {
+                width: 100%;
+                margin-left: 0.5rem !important;
+            }
+
+            &:nth-child(4) {
+                padding-bottom: 0rem;
+            }
+
+            &:last-child {
+                padding-bottom: 0rem;
+                margin-bottom: 0rem;
+            }
+        }
+    }
+}

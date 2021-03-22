@@ -1,0 +1,7 @@
+{
+    "app-name": "Incognito-backend-service",
+    "db": "mongodb://localhost/kahoot_db",
+    "googleClientId": "400100958485-e0duclf6c4pl5mjld5sursr76c2etltj.apps.googleusercontent.com",
+    "token-expiry-time": "2h",
+    "isLoggingDisabled": false
+}

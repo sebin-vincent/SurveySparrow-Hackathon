@@ -1,0 +1,49 @@
+@import "../../../theme/scss/styles.scss";
+
+.kahoot_card {
+    display: flex;
+    flex-direction: row;
+
+    &_media {
+        width: 25%;
+        background-size: cover;
+    }
+
+    &_content {
+        flex: 1 0 auto;
+
+        &_wrapper {
+            padding: unset !important;
+
+            &_title {
+                padding: 1rem;
+                height: 4rem !important;
+                font-weight: 700 !important;
+            }
+
+            &_info {
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &_footer {
+                padding: 1rem !important;
+                background-color: $color-light-200;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0.5rem;
+
+                &_actions {
+                    display: flex;
+
+                    &_button {
+                        padding: 0rem 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

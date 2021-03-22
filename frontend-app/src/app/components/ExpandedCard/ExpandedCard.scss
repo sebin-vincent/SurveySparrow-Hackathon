@@ -1,0 +1,27 @@
+.expanded_card {
+    &_action_area {
+        .MuiCardMedia-root {
+            background-size: cover;
+        }
+        &_media {
+            height: 15rem;
+        }
+        &_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 7rem;
+
+            &_title {
+                font-weight: 700 !important;
+                font-size: 1.75rem !important;
+            }
+        }
+    }
+
+    &_actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

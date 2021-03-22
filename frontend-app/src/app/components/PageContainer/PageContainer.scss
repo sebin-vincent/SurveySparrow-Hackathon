@@ -1,0 +1,20 @@
+@import "../../../theme/scss/styles.scss";
+
+.page_content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 30rem;
+
+    &_navbar {
+        min-height: 5rem;
+        height: 5rem;
+        background-color: $color-blue-main;
+    }
+
+    &_children {
+        flex: 1;
+        background-color: $color-light-200;
+        padding: 2rem 0rem;
+    }
+}

@@ -1,0 +1,31 @@
+@import "../../../theme/scss/styles.scss";
+
+.page_404 {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: $color-light-100;
+
+    .container {
+        width: 100%;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .four_zero_four_bg {
+        height: 400px;
+        background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+        background-position: center;
+
+        h1 {
+            font-size: 5rem;
+        }
+    }
+
+    .content_box_404 {
+        margin-top: -3rem;
+    }
+}

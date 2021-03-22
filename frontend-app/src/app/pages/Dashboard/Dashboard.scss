@@ -1,0 +1,11 @@
+@import "../../../theme/scss/styles.scss";
+
+.dashboard {
+    display: flex;
+
+    &_collection {
+        border: 1px solid $color-light-200;
+        width: 65%;
+        margin-top: 2rem;
+    }
+}

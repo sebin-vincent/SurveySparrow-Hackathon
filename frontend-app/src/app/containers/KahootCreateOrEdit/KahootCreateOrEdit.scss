@@ -1,0 +1,34 @@
+.kahoot_create_edit {
+    &_summary {
+    }
+
+    &_details {
+        &_section {
+            display: flex;
+            flex-direction: row;
+            padding: 2rem;
+            margin-bottom: 2rem;
+
+            :nth-child(odd) {
+                margin-left: 0rem !important;
+            }
+
+            :nth-child(even) {
+                margin-left: 0rem !important;
+            }
+
+            &_title {
+                margin: 0rem 1rem !important;
+            }
+
+            &_button {
+                width: 20%;
+                margin: 0rem 1rem !important;
+            }
+        }
+
+        &_questions {
+            margin-bottom: 2rem;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+pipeline{
+    agent any
+    triggers{
+        githubPush()
+    }
+    stages{
+        stage('Build'){
+            steps{
+                echo 'Building'
+            }
+        }
+        stage('Deploy'){
+            steps{
+                withCredentials([sshUserPrivateKey(credentialsId: 'hackthon_instance', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ubuntu')]) {
+                    script {
+                        def remote = [:]
+                        remote.name = "ubuntu"
+                        remote.host = "15.206.15.125"
+                        remote.allowAnyHosts = true
+                        remote.user = ubuntu
+                        remote.identityFile = identity
+
+                        sshCommand remote: remote, command: '''
+                            cd Incognito/ ;
+                            rm backend-service/private.key ;
+                            rm backend-service/public.key ;
+                            git pull origin backend/dev ;
+                            cd backend-service/ ;
+                            ssh-keygen -t rsa -b 4096 -m PEM -f private.key -N '' ;
+                            ssh-keygen -f private.key -e -m PKCS8 > public.key ;
+                            sudo chmod 755 ./private.key;
+                            sudo chmod 755 ./public.key;
+                            rm private.key.pub ;
+                            docker build -t incognito . ;
+                            docker rm -f incognito || true ;
+                            docker run --env-file ./env.list -d --name incognito -p 80:3000 incognito;
+                            '''
+                    }
+                }
+                echo 'Deploying project'
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import "../../../theme/scss/styles.scss";
+
+.shade {
+    &__red {
+        background-color: $color-red-main !important;
+    }
+
+    &__blue {
+        background-color: $color-blue-main !important;
+    }
+
+    &__green {
+        background-color: $color-green-main !important;
+    }
+
+    &__yellow {
+        background-color: $color-yellow-main !important;
+    }
+
+    > .MuiButton-label {
+        color: $color-light-100;
+        text-shadow: 0 0.0625rem 0.125rem $color-transparent-dark-300;
+    }
+
+    &.Mui-disabled {
+        opacity: 0.5 !important;
+    }
+}

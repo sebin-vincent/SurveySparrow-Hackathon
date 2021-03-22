@@ -1,0 +1,36 @@
+@import "../../../theme/scss/styles.scss";
+
+.oauth {
+    &__wrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .btn-google-signin {
+            background-color: $color-primary-main !important;
+            outline: 0;
+
+            > div {
+                background: transparent !important;
+                padding: 0 !important;
+                margin: 1rem !important;
+            }
+
+            > span {
+                color: $color-light-100 !important;
+                letter-spacing: 0.05rem;
+                font-weight: $font-weight-medium !important;
+                font-family: cursive !important;
+                font-size: $font-size-md !important;
+                text-shadow: 1px 1px 3px $color-dark-100;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import "../../../theme/scss/styles.scss";
+
+.kahoot_manage {
+    padding: 0rem 10rem;
+
+    &_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &_title {
+            font-weight: 700 !important;
+        }
+    }
+
+    &_body {
+        padding-top: 2rem !important;
+
+        &_tile {
+            padding: 0.5rem 0rem;
+            cursor: pointer;
+        }
+    }
+}

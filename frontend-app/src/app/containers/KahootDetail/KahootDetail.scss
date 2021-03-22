@@ -1,0 +1,63 @@
+@import "../../../theme/scss/styles.scss";
+
+.kahoot_detail {
+    &_left {
+        margin-top: -2rem !important;
+        margin-bottom: -2rem !important;
+        min-height: calc(100vh - 5rem);
+        background-color: $color-light-100;
+
+        &_section {
+            &_image {
+                width: 100%;
+            }
+
+            &_content {
+                padding: 1rem 2rem;
+
+                &_title {
+                    font-weight: 700 !important;
+                }
+
+                &_actions {
+                    display: flex;
+                    align-items: center;
+
+                    &_button {
+                        padding-right: 1rem;
+                        padding-top: 0.5rem;
+                        padding-bottom: 2rem;
+                    }
+                }
+
+                &_description {
+                    padding-bottom: 2rem;
+                }
+            }
+        }
+    }
+
+    &_right {
+        padding-left: 2rem;
+
+        &_header {
+            padding: 1rem 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &_heading {
+                font-weight: 700 !important;
+            }
+
+            &_show {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        &_card {
+            padding-bottom: 2rem;
+        }
+    }
+}

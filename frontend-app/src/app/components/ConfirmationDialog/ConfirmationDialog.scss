@@ -1,0 +1,15 @@
+@import "../../../theme/scss/styles.scss";
+
+.confirmation_dialog {
+    &_title {
+        border-bottom: 1px solid $color-light-300;
+    }
+
+    &_content {
+        padding-top: 2rem !important;
+    }
+
+    &_actions {
+        padding: 1rem 3rem 2rem 3rem !important;
+    }
+}

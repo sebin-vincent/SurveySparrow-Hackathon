@@ -1,0 +1,37 @@
+@import "../../../theme/scss/styles.scss";
+
+.mui-card-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    .mui-card-media {
+        width: 25%;
+        background-size: cover;
+    }
+
+    .mui-card-content-wrapper {
+        flex: 1 0 auto;
+
+        .mui-card-content {
+            padding: unset;
+
+            &-title {
+                padding: 1rem;
+                height: 4rem;
+                font-weight: 700 !important;
+            }
+
+            .mui-card-footer {
+                background-color: $color-light-200;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0.5rem;
+
+                &-subtitle {
+                    margin-right: 0.8rem;
+                }
+            }
+        }
+    }
+}

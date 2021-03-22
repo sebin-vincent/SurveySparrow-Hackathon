@@ -1,0 +1,36 @@
+@import "../../../theme/scss/styles.scss";
+
+.question_card {
+    &_top {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid $color-light-300;
+        min-height: 12rem;
+
+        &_question {
+            flex: 1 0 auto;
+            &_content {
+                &_header {
+                }
+                &_title {
+                    font-weight: 700 !important;
+                }
+            }
+        }
+
+        &_media {
+            width: 25%;
+            background-size: cover;
+        }
+    }
+
+    &_answers {
+        &_each {
+            padding: 1.5rem;
+            border-bottom: 1px solid $color-light-300;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
